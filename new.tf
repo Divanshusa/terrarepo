@@ -9,7 +9,7 @@ resource "aws_vpc" "terravpc" {
   Name = "terravpc"
  }
 }
-#ok
+
 resource "aws_subnet" "terrasub" {
  vpc_id = aws_vpc.terravpc.id
  availability_zone = "ap-south-1a" 
