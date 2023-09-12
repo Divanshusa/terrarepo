@@ -21,7 +21,6 @@ resource "aws_subnet" "terrasub" {
 
 resource "aws_internet_gateway" "terraigw" {
  vpc_id = aws_vpc.terravpc.id
- cidr = "0.0.0.0/0"
  tags = {
   Name = "terraigw"
   }
