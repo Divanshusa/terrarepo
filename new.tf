@@ -25,3 +25,14 @@ resource "aws_internet_gateway" "terraigw" {
   Name = "terraigw"
   }
 }
+
+resource "aws_route_table" "terrart" {
+ vpc_id =  aws_vpc.terravpc.id
+ tags = {
+  Name = "terrart"
+  }
+  route {
+  cidr = "0.0.0.0/0"
+  gateway_id = aws_internet_gateway.terraigw.id
+  }
+}
